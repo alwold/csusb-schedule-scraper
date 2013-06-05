@@ -7,10 +7,6 @@ class CsusbScheduleScraper
   def get_class_info(term_code, course_abbrev, course_number, class_number)
     doc = fetch_info(term_code, course_abbrev, course_number, class_number)
     rows = doc.xpath("//table[tr/th/b/a[text()='Subject']]/tr[td]")
-    # if results_table.empty?
-    #   return nil
-    # end
-    # rows = results_table.xpath("tr")
     rows.each do |row|
       cells = row.xpath("td")
       if cells[1].text.strip == class_number
@@ -56,8 +52,6 @@ private
       res = http.request(req)
     end
     doc = Nokogiri::HTML(res.body)
-    # this somehow makes decoding of entities work (https://twitter.com/#!/tenderlove/status/11489447561)
-#    doc.encoding = "UTF-8"
     return doc
   end
 end

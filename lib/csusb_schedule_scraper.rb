@@ -1,6 +1,5 @@
 require 'net/http'
 require 'nokogiri'
-require 'ruby-debug'
 require_relative 'csusb_class_info'
 
 class CsusbScheduleScraper

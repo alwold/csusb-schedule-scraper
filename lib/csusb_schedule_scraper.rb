@@ -19,7 +19,7 @@ class CsusbScheduleScraper
 
   def get_class_status(term_code, course_abbrev, course_number, class_number)
     doc = fetch_info(term_code, course_abbrev, course_number, class_number)
-    rows = doc.xpath("//table[tr/th/b/a[text()='Subject']]/tr[td]")
+    rows = doc.xpath("//table[tr/th//a[text()='Subject']]/tr[td]")
     rows.each do |row|
       cells = row.xpath("td")
       if cells[1].text.strip == class_number

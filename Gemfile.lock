@@ -2,15 +2,13 @@ GEM
   remote: https://rubygems.org/
   specs:
     builder (3.2.2)
+    byebug (2.5.0)
+      columnize (~> 0.3.6)
+      debugger-linecache (~> 1.2.0)
     ci_reporter (1.8.4)
       builder (>= 2.1.2)
     columnize (0.3.6)
-    debugger (1.6.0)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.1)
     debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.2)
     diff-lcs (1.2.4)
     nokogiri (1.5.9)
     rspec (2.13.0)
@@ -26,7 +24,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug
   ci_reporter
-  debugger
   nokogiri
   rspec

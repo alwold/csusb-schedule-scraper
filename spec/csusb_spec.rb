@@ -25,9 +25,9 @@ describe CsusbScheduleScraper, '#get_class_info' do
     # TODO we need some way to validate that the title and schedules of a class
     # look like a title/schedule, rather than just pulling from the table and making
     # sure the scraper sees the same
-    info = scraper.get_class_info('2136', 'ENG', '107', '60394')
-    info.name.should eq("ADV FIRST-YEAR COMP")
-    info.schedule.should eq("TR 10:00 AM - 11:50 AM")
+    info = scraper.get_class_info('2144', 'ACCT', '211', '40771')
+    info.name.should eq("INTRO ACCT I")
+    info.schedule.should eq("MW 2:00 PM - 3:50 PM")
   end
   it "returns nil for non-existent class" do
     scraper.get_class_status('2136', 'ENG', '107', '102938908').should eq(nil)

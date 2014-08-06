@@ -11,6 +11,7 @@ GEM
     debugger-linecache (1.2.0)
     diff-lcs (1.2.4)
     nokogiri (1.5.9)
+    rake (10.3.2)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -27,4 +28,5 @@ DEPENDENCIES
   byebug
   ci_reporter
   nokogiri
+  rake
   rspec

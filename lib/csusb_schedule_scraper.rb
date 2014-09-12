@@ -44,9 +44,10 @@ private
   end
 
   def fetch_info(term_code, course_abbrev, course_number, class_number)
-    uri = URI("http://info001.csusb.edu/schedule/astra/class.jsp?quarter=#{term_code}&campus=ALL&crseabbrev=#{course_abbrev}&cnmbr=#{course_number}&txc=+&Submit=Submit")
+    uri = URI("https://acsweb.csusb.edu/schedule/astra/class.jsp?quarter=#{term_code}&campus=ALL&crseabbrev=#{course_abbrev}&cnmbr=#{course_number}&txc=+&Submit=Submit")
     req = Net::HTTP::Get.new(uri.request_uri)
     http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
     res = http.start do |http| 
       res = http.request(req)
     end
